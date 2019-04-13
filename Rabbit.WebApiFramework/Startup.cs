@@ -36,7 +36,10 @@ namespace Rabbit.WebApiFramework
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
+
+            
             var assemblyLst = LoadPlugins();
+
             services.Configure<RazorViewEngineOptions>(options =>
             {
                 foreach (var ass in assemblyLst)
@@ -74,6 +77,11 @@ namespace Rabbit.WebApiFramework
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
+
+        /// <summary>
+        ///  加载自定的扩展
+        /// </summary>
+        /// <returns>List&lt;Assembly&gt;.</returns>
         protected List<Assembly> LoadPlugins()
         {
             AppDomain.CurrentDomain.AssemblyResolve += OnAssemblyResolve;
