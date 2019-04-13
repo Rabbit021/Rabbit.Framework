@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rabbit.WebApiFramework", "Rabbit.WebApiFramework\Rabbit.WebApiFramework.csproj", "{FCE4F2A1-EFC3-451A-8EA2-89211194759B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rabbit.WebApiFramework.Core", "Rabbit.WebApiFramework.Core\Rabbit.WebApiFramework.Core.csproj", "{1C28F979-7174-4199-A554-DC3B4809F5FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rabbit.WebApiFramework.Core", "Rabbit.WebApiFramework.Core\Rabbit.WebApiFramework.Core.csproj", "{1C28F979-7174-4199-A554-DC3B4809F5FD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{D0A8D8AC-034C-4FFF-AC17-1B1C8110F096}"
 EndProject
