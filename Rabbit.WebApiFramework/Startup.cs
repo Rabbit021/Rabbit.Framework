@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
@@ -10,8 +9,10 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApplicationParts;
+using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json.Linq;
 using Rabbit.WebApiFramework.Core;
@@ -36,6 +37,13 @@ namespace Rabbit.WebApiFramework
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
             var assemblyLst = LoadPlugins();
+            services.Configure<RazorViewEngineOptions>(options =>
+            {
+                foreach (var ass in assemblyLst)
+                {
+                    options.FileProviders.Add(new EmbeddedFileProvider(ass));
+                }
+            });
             services.AddMvc().ConfigureApplicationPartManager(manager =>
             {
                 foreach (var ass in assemblyLst)
@@ -43,6 +51,7 @@ namespace Rabbit.WebApiFramework
                     manager.ApplicationParts.Add(new AssemblyPart(ass));
                 }
             }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
         }
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
