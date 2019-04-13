@@ -42,6 +42,7 @@ namespace Rabbit.WebApiFramework
 
             services.Configure<RazorViewEngineOptions>(options =>
             {
+                // 添加View的提供方式
                 foreach (var ass in assemblyLst)
                 {
                     options.FileProviders.Add(new EmbeddedFileProvider(ass));
@@ -51,6 +52,7 @@ namespace Rabbit.WebApiFramework
             {
                 foreach (var ass in assemblyLst)
                 {
+                    // 添加Controller
                     manager.ApplicationParts.Add(new AssemblyPart(ass));
                 }
             }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
