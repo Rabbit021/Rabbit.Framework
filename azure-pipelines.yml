@@ -3,9 +3,9 @@ resources:
 
 pool:
   name: Hosted Ubuntu 1604
-parameters:
-  RestoreBuildProjects: '**/*.csproj'
-  TestProjects: '**/*[Tt]ests/*.csproj'
+variables:
+  Parameters.RestoreBuildProjects: '**/*.csproj'
+  Parameters.TestProjects: '**/*[Tt]ests/*.csproj'
   BuildConfiguration: 'Release'
 
 steps:
