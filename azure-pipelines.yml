@@ -10,7 +10,7 @@ strategy:
     windows: 
       imageName: Hosted VS2017 
 pool:
-  name: ${imageName}
+  vmImage: ${imageName}
 variables:
   Parameters.RestoreBuildProjects: '**/*.csproj'
   Parameters.TestProjects: '**/*[Tt]ests/*.csproj'
