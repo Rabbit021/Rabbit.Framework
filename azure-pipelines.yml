@@ -2,9 +2,9 @@ resources:
 - repo: self
 
 strategy:
-    matrix: 
+  matrix: 
     linux: 
-      imageName: 'Hosted Ubuntu 1604'
+       imageName: 'Hosted Ubuntu 1604'
     mac:
       imageName: 'Hosted Ubuntu 1604'
     windows: 
