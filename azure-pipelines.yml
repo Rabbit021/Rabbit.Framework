@@ -5,12 +5,11 @@ strategy:
   matrix: 
     linux: 
       imageName: 'Hosted Ubuntu 1604'
-    mac:
-      imageName: 'Hosted Ubuntu 1604'
     windows: 
       imageName: 'Hosted VS2017'
 pool:
   vmImage: ${imageName}
+
 variables:
   Parameters.RestoreBuildProjects: '**/*.csproj'
   Parameters.TestProjects: '**/*[Tt]ests/*.csproj'
