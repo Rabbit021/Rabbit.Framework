@@ -11,6 +11,8 @@ strategy:
 pool:
   vmImage: $(imageName)
 
+trigger: [master]
+
 variables:
   Parameters.RestoreBuildProjects: '**/*.csproj'
   Parameters.TestProjects: '**/*[Tt]ests/*.csproj'
