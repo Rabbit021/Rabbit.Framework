@@ -2,6 +2,11 @@
 
 基于asp.net core构件的插件式webapi快速开发框架
 
+| system  | build status（master分支）                                   |
+| ------- | ------------------------------------------------------------ |
+| linux   | [![Build Status](https://rabbit021.visualstudio.com/Rabbit.WebApiFramework/_apis/build/status/Rabbit.WebApiFramework-CI?branchName=master)](https://rabbit021.visualstudio.com/Rabbit.WebApiFramework/_build/latest?definitionId=5&branchName=master) |
+| windows |                                                              |
+
 ##### 项目说明
 
 - 使用asp.net core 2.2 开发，利用ApplicationPart构件插件式的WebAppFramework/WebApiFramework
