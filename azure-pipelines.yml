@@ -3,7 +3,7 @@ resources:
 
 pool:
   name: Hosted Ubuntu 1604
-Parameters:
+parameters:
   RestoreBuildProjects: '**/*.csproj'
   TestProjects: '**/*[Tt]ests/*.csproj'
   BuildConfiguration: 'Release'
