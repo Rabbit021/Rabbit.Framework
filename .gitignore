@@ -33,7 +33,8 @@
 /.vs/
 /Rabbit.WebApiFramework/bin/
 /Rabbit.WebApiFramework/obj/
-/Plugins/
+/Rabbit.WebApiFramework/Plugins/
 /Rabbit.WebApiFramework.Core/bin/
 /Rabbit.WebApiFramework.Core/obj/
-/Rabbit.WebApiFramework/Plugins/
+/Plugins/**/bin/
+/Plugins/**/obj/
