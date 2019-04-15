@@ -5,7 +5,7 @@
 | system  | build status（master分支）                                   |
 | ------- | ------------------------------------------------------------ |
 | linux   | [![Build Status](https://rabbit021.visualstudio.com/Rabbit.WebApiFramework/_apis/build/status/Rabbit.WebApiFramework-CI?branchName=master)](https://rabbit021.visualstudio.com/Rabbit.WebApiFramework/_build/latest?definitionId=5&branchName=master) |
-| windows |                                                              |
+| windows | [![Build Status](https://rabbit021.visualstudio.com/Rabbit.WebApiFramework/_apis/build/status/Rabbit.WebApiFramework-CI?branchName=master)](https://rabbit021.visualstudio.com/Rabbit.WebApiFramework/_build/latest?definitionId=5&branchName=master) |
 
 ##### 项目说明
 
