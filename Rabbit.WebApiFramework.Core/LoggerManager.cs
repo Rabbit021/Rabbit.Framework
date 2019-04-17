@@ -34,7 +34,7 @@ namespace Rabbit.WebApiFramework.Core
         public void Error(Exception ex, object oj = null, bool useConsole = false)
         {
             Logger.Error(ex, ex.Message, oj);
-            ConsoleWitreLine( " Exception:" + ex.Message, "Error", useConsole);
+            ConsoleWitreLine(" Exception:" + ex.Message, "Error", useConsole);
         }
 
         public void Error(string message, Exception ex, string info, bool useConsole = false)
