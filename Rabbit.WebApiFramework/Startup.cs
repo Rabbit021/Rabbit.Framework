@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
+using System.Runtime.Loader;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -12,6 +14,7 @@ using Microsoft.AspNetCore.Mvc.ApplicationParts;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyModel;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json.Linq;
@@ -34,8 +37,6 @@ namespace Rabbit.WebApiFramework
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-
-            
             var assemblyLst = LoadPlugins();
 
             services.Configure<RazorViewEngineOptions>(options =>
@@ -84,6 +85,7 @@ namespace Rabbit.WebApiFramework
         /// <returns>List&lt;Assembly&gt;.</returns>
         protected List<Assembly> LoadPlugins()
         {
+
             AppDomain.CurrentDomain.AssemblyResolve += OnAssemblyResolve;
             var pConfig = Configuration.GetSection("Plugins").Get<PluginConfiguraton>();
             var lst = new List<Assembly>();
@@ -120,4 +122,6 @@ namespace Rabbit.WebApiFramework
     {
         public string[] Path { get; set; } = { };
     }
+
+
 }

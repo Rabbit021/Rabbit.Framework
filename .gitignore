@@ -38,3 +38,8 @@
 /Rabbit.WebApiFramework.Core/obj/
 /Plugins/**/bin/
 /Plugins/**/obj/
+/HostAssembly/bin/
+bin
+obj
+deployment
+

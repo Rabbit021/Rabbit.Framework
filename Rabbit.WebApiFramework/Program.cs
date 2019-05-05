@@ -13,6 +13,8 @@ namespace Rabbit.WebApiFramework
         public static IWebHostBuilder CreateWebHostBuilder(string[] args)
         {
             return WebHost.CreateDefaultBuilder(args)
+                .UseSetting(WebHostDefaults.ApplicationKey, "Rabbit.WebApiFramework")
+                .UseSetting(WebHostDefaults.HostingStartupAssembliesKey, "HostAssembly")
                 .UseStartup<Startup>();
         }
     }
